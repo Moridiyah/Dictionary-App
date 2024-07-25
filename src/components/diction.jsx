@@ -29,17 +29,17 @@ const Nav = () => {
         <p className='text-[36px] text-blue-950 text-center pb-[32px] font-bold'>
           Dictionary
         </p>
-        <form
-          onSubmit={fetchdiction}
-          className='flex flex-col md:flex-row justify-between gap-6'
-        >
+        <form className='flex flex-col md:flex-row justify-between gap-6'>
           <input
             type='text'
             onChange={handleInput}
             placeholder='enter a word'
             className='w-[100%] md:w-[80%] h-[40%] px-3 py-4 rounded-md'
           />
-          <button className='w-[100%] md:w-[20%] h-[40%] text-center bg-blue-950 px-3 py-4 rounded-md'>
+          <button
+            onClick={fetchdiction}
+            className='w-[100%] md:w-[20%] h-[40%] text-center bg-blue-950 px-3 py-4 rounded-md'
+          >
             Submit
           </button>
         </form>
